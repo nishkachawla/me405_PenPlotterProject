@@ -20,6 +20,7 @@
 |  1   | Shaft Coupling        | McMaster-Carr | $5 |
 |  1   | Sleeve Nut        | McMaster-Carr | $5 |
 |  1   | Pillow Block        | McMaster-Carr | $10 |
+|  1   | Wood        | Teche Lab | - |
 
 #### Scaled Sketch of Proposed System 
 ![Step Response](Images/RC_Step.png)
