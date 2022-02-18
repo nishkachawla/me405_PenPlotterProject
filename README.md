@@ -23,5 +23,5 @@
 |  1   | Wood        | Teche Lab | - |
 
 #### Scaled Sketch of Proposed System 
-![Step Response](Images/RC_Step.png)
+![Scaled Sketch of Proposed System](Images/ScaledSketch.png)
 ###### Above is  scaled sketch of our proposed system. 
