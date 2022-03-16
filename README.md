@@ -4,13 +4,13 @@
 
 ### Project Introduction
 
-For the Mechatronics term project, this group elected to design and build a 2.5 axis pen plotter. The purpose of this machine is to take a Hewlett-Packard Graphics Language (HPGL) file,
+###### For the Mechatronics term project, this group elected to design and build a 2.5 axis pen plotter. The purpose of this machine is to take a Hewlett-Packard Graphics Language (HPGL) file,
 which encodes the relevant commands and coordinates to draw an image, and autonomously plot the image on a flat piece of paper. It is intended for educational use so that students can
 practice both mechanical and firmware design principles.
 
 ### Hardware Design Overview
 
-This group's pen plotter operates on a polar coordinate system, naturally producing curvilinear motion as it traces out the image on file over a 360 degree range of motion.
+###### This group's pen plotter operates on a polar coordinate system, naturally producing curvilinear motion as it traces out the image on file over a 360 degree range of motion.
 It rotates about a central base, upon which two Ametek-Pittman motors are mounted parallel to the plotting surface, in addition to the STM Nucleo microcontroller.
 One motor is coupled to a 1/4 inch shaft and directly drives a wheel 14 inches from the rotating base, controlling the angular position of the pen during plotting. 
 The other motor, locating directly beneath the first, is coupled to a threaded rod. An aluminum beam attached to the central mount provides structural support to the adjacent rod and shaft,
@@ -21,7 +21,7 @@ The motor mount and base, the drive wheel, and the pen/servo mount were 3D print
 
 ### Software Design Overview
 
-Our program runs from a main script, which loops through a task list, executing each task from the scheduler according to its priority. Upon startup, gains are set from the PC and then the
+###### Our program runs from a main script, which loops through a task list, executing each task from the scheduler according to its priority. Upon startup, gains are set from the PC and then the
 HPGL file to be plotted is opened and read, at which point a list is created storing the sequence of setpoints determined by the HPGL coordinates. The task scheduler then starts iterating 
 through the motor and plot tasks to trace out the image on file. The motor tasks, which include the controller, encoder, and motor drivers, are responsible for assigning setpoints and 
 computing the error between each measured and desired position to output duty cycles to the motors. The measured position comes from the encoder driver, and the error and duty cycle output
@@ -30,13 +30,13 @@ motor to actuate the pen in the radial or angular direction. Every time a Pen-Up
 
 ### Testing & Results
 
-Our system was mainly tested by applying a step response to the Ametek-Pittman motors to determine proportional gain values to use during plotting. Additional step response tests were conducted, 
+###### Our system was mainly tested by applying a step response to the Ametek-Pittman motors to determine proportional gain values to use during plotting. Additional step response tests were conducted, 
 varying the controller task frequency to test its performance. This ensured minimal overshoot and oscillation as the motors were directed to each setpoint. 
 With gain values of 0.1 [% duty cycle / encoder count] at a rate of 100 Hz, our system performed reasonably well for its application.
 
 ### Project Takeaways & Learning Outcomes
 
-Over the course of this project, we learned the most from what went wrong and not according to plan. The hardware design timeframe took much longer than anticipated, eating into the available
+###### Over the course of this project, we learned the most from what went wrong and not according to plan. The hardware design timeframe took much longer than anticipated, eating into the available
 time to write and debug software. For example, tolerances and press fits for 3D printed parts were difficult and required multiple reprints. Simple attachments, such as between the pen and servo
 linkage, were surprisingly difficult when trying to formulate a simple and robust connection for very small parts and surfaces. We found the simpler we kept our design, the better it functioned
 and the less room for error there was. Designing a modular system made it easier to modify and improve our design when one subsystem was not performing well, like when the threaded rod needed
