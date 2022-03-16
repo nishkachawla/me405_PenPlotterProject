@@ -25,10 +25,21 @@
 var NAVTREE =
 [
   [ "ME_405_Pen_Plotter_Project", "index.html", [
+    [ "Software Organisation", "index.html#ss_organisation", null ],
     [ "Software Design", "index.html#ss_software", [
       [ "Task Diagram", "index.html#ss_taskdiagram", null ],
       [ "Motor 1 State Transition Diagram", "index.html#ss_fsm1", null ],
       [ "Motor 2 State Transition Diagram", "index.html#ss_fsm2", null ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]
@@ -38,7 +49,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

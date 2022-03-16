@@ -3,6 +3,13 @@
 # @author Ronan Shaffer
 # @mainpage
 #
+# @section ss_organisation Software Organisation
+# The main.py file runs tasks that operate Motor 1, Motor 2, and a task that extracts setpoints from an HPGL file. The Motor 1 and Motor 2 tasks 
+# use the closedloopcontrol.py to perform proportional control on the operation of the motor, using motor_chawla_shaffer.py and 
+# encoder_chawla_shaffer.py. The plotting task reads data from an HPGL file to operate the actuation of the servo, using servo.py, 
+# and queues r- and theta - positional coordinate setpoints for each motor to achieve. The tasks are run using a task scheduler 
+# created in cotask.py, and shared variables and queues are instantiated in main.py using classes contained in task_share.py.
+# 
 # @section ss_software Software Design
 # Below is a proposed task diagram and state transition diagrams for our teams pen plotter machine. 
 # 
