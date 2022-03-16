@@ -4,20 +4,11 @@
 
 ### Project Introduction
 
-###### For the Mechatronics term project, this group elected to design and build a 2.5 axis pen plotter. The purpose of this machine is to take a Hewlett-Packard Graphics Language (HPGL) file,
-###### which encodes the relevant commands and coordinates to draw an image, and autonomously plot the image on a flat piece of paper. It is intended for educational use so that students can
-###### practice both mechanical and firmware design principles.
+###### For the Mechatronics term project, this group elected to design and build a 2.5 axis pen plotter. The purpose of this machine is to take a Hewlett-Packard Graphics Language (HPGL) file, which encodes the relevant commands and coordinates to draw an image, and autonomously plot the image on a flat piece of paper. It is intended for educational use so that students can practice both mechanical and firmware design principles.
 
 ### Hardware Design Overview
 
-###### This group's pen plotter operates on a polar coordinate system, naturally producing curvilinear motion as it traces out the image on file over a 360 degree range of motion.
-###### It rotates about a central base, upon which two Ametek-Pittman motors are mounted parallel to the plotting surface, in addition to the STM Nucleo microcontroller.
-###### One motor is coupled to a 1/4 inch shaft and directly drives a wheel 14 inches from the rotating base, controlling the angular position of the pen during plotting. 
-###### The other motor, locating directly beneath the first, is coupled to a threaded rod. An aluminum beam attached to the central mount provides structural support to the adjacent rod and shaft,
-###### fixing them in place to minimize deviation from the encoded trajectory which would introduce undesirable wobble. Finally, a hobby servo motor is mounted next to the pen on the hex nut
-###### which travels the length of the threaded rod, controlling the radial position of the pen. The servo actuates the pen via a small linkage to lift or drop the pen onto the paper. All three
-###### motors are wired to the Nucleo which is connected to benchtop power supply. The nucleo is also connected to a computer which communicates to the Nucleo with a USB cable to run the program.
-###### The motor mount and base, the drive wheel, and the pen/servo mount were 3D printed, while the threaded rod, shaft, support beam, and bearings were procured either on campus or from online vendors.
+###### This group's pen plotter operates on a polar coordinate system, naturally producing curvilinear motion as it traces out the image on file over a 360 degree range of motion. It rotates about a central base, upon which two Ametek-Pittman motors are mounted parallel to the plotting surface, in addition to the STM Nucleo microcontroller. One motor is coupled to a 1/4 inch shaft and directly drives a wheel 14 inches from the rotating base, controlling the angular position of the pen during plotting.  The other motor, locating directly beneath the first, is coupled to a threaded rod. An aluminum beam attached to the central mount provides structural support to the adjacent rod and shaft, fixing them in place to minimize deviation from the encoded trajectory which would introduce undesirable wobble. Finally, a hobby servo motor is mounted next to the pen on the hex nut which travels the length of the threaded rod, controlling the radial position of the pen. The servo actuates the pen via a small linkage to lift or drop the pen onto the paper. All three motors are wired to the Nucleo which is connected to benchtop power supply. The nucleo is also connected to a computer which communicates to the Nucleo with a USB cable to run the program. The motor mount and base, the drive wheel, and the pen/servo mount were 3D printed, while the threaded rod, shaft, support beam, and bearings were procured either on campus or from online vendors.
 
 ### Software Design Overview
 
