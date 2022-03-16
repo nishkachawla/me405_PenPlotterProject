@@ -16,7 +16,7 @@
 #
 #
 # @subsection ss_taskdiagram Task Diagram 
-# \image html Task_Diagram.png "Task Diagram" width=750cm
+# \image html TaskDiagram.png "Task Diagram" width=750cm
 # This is a task diagram for our pen plotter. Each motor task runs its own motor driver, 
 # encoder driver, and controller.
 # A calibration flag will be shared between the tasks to start plotting only after both 
@@ -25,7 +25,7 @@
 #
 #
 # @subsection ss_fsm1 Motor 1 State Transition Diagram
-# \image html Motor_1_FSM.png "Motor 1 Finite State Machine" width=750cm 
+# \image html Motor_1.png "Motor 1 Finite State Machine" width=750cm 
 # Our State Transition Diagram for Motor 1 has a calibration state and a run state. 
 # When the Motor 1 task is run, the FSM starts in the calibration state to zero the position of the motor 
 # using a limit switch. Once the limit switch flag is true, the FSM moves to the run state to begin plotting. Once in the 
@@ -34,7 +34,7 @@
 #
 #
 # @subsection ss_fsm2 Motor 2 State Transition Diagram
-# \image html Motor_2_FSM.png "Motor 2 Finite State Machine" width=750cm
+# \image html Motor_2.png "Motor 2 Finite State Machine" width=750cm
 # Our State Transition Diagram for Motor 2 is very similar to motor 1 as it has a calibration state, and a run state. 
 # When the Motor 2 task is run, the FSM starts in the calibration state to zero the position of 
 # the motor using the limit switch. Once the limit switch flag is true, the FSM moves to the run state to begin plotting. 
