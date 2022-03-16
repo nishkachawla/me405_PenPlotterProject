@@ -43,6 +43,6 @@
 |  1   | Support Mount 	       | Teche Lab             |    -      |
 
 
-##### Picture of Pen Plotter
+### Picture of Pen Plotter
 ![Pen Plotter](Images/PenPlotter.png)
 ###### Above is a picture of our Pen Plotter. A video demonstration of our pen plotter can be found using this link: https://youtu.be/GVp6Itpa4hw 
