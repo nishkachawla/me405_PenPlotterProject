@@ -11,7 +11,7 @@
 # created in cotask.py, and shared variables and queues are instantiated in main.py using classes contained in task_share.py.
 # 
 # @section ss_software Software Design
-# Below is a proposed task diagram and state transition diagrams for our teams pen plotter machine. 
+# Below is the task diagram and state transition diagrams for our teams pen plotter machine. 
 # 
 #
 #
