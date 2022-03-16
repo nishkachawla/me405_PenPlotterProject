@@ -13,6 +13,7 @@
 ### Software Design Overview
 
 ###### Our program runs from a main script, which loops through a task list, executing each task from the scheduler according to its priority. Upon startup, gains are set from the PC and then the HPGL file to be plotted is opened and read, at which point a list is created storing the sequence of setpoints determined by the HPGL coordinates. The task scheduler then starts iterating through the motor and plot tasks to trace out the image on file. The motor tasks, which include the controller, encoder, and motor drivers, are responsible for assigning setpoints and computing the error between each measured and desired position to output duty cycles to the motors. The measured position comes from the encoder driver, and the error and duty cycle output is computed by the closed-loop controller driver, which sends the pulse width modulation (PWM) signal to the motor driver, which sends this signal to the corresponding channel of the relevant motor to actuate the pen in the radial or angular direction. Every time a Pen-Up or Pen-Down command is read from the HPGL file, the servo is actuated to lift or drop the pen.
+###### Our doxygen page can be found here: https://nishkachawla.github.io/me405_PenPlotterProject/
 
 ### Testing & Results
 
