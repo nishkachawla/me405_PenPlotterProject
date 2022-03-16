@@ -91,28 +91,28 @@ Software Organisation</h1>
 <p >The <a class="el" href="main_8py.html" title="This file contains a program that runs tasks which use proportional control to run motors and encoder...">main.py</a> file runs tasks that operate Motor 1, Motor 2, and a task that extracts setpoints from an HPGL file. The Motor 1 and Motor 2 tasks use the <a class="el" href="closedloopcontrol_8py.html" title="This file contains a controller driver used for closed loop control.">closedloopcontrol.py</a> to perform proportional control on the operation of the motor, using <a class="el" href="motor__chawla__shaffer_8py.html" title="This file contains code used to configure the L6206 motor.">motor_chawla_shaffer.py</a> and <a class="el" href="encoder__chawla__shaffer_8py.html" title="This file contains code used to configure the Quadrature encoders.">encoder_chawla_shaffer.py</a>. The plotting task reads data from an HPGL file to operate the actuation of the servo, using <a class="el" href="servo_8py.html" title="This file contains code used to configure the servo motor.">servo.py</a>, and queues r- and theta - positional coordinate setpoints for each motor to achieve. The tasks are run using a task scheduler created in <a class="el" href="cotask_8py.html" title="This file contains classes to run cooperatively scheduled tasks in a multitasking system.">cotask.py</a>, and shared variables and queues are instantiated in <a class="el" href="main_8py.html" title="This file contains a program that runs tasks which use proportional control to run motors and encoder...">main.py</a> using classes contained in <a class="el" href="task__share_8py.html" title="This file contains classes which allow tasks to share data without the risk of data corruption by int...">task_share.py</a>.</p>
 <h1><a class="anchor" id="ss_software"></a>
 Software Design</h1>
-<p >Below is a proposed task diagram and state transition diagrams for our teams pen plotter machine.</p>
+<p >Below is the task diagram and state transition diagrams for our teams pen plotter machine.</p>
 <h2><a class="anchor" id="ss_taskdiagram"></a>
 Task Diagram</h2>
 <div class="image">
-<img src="Task_Diagram.png" alt="" width="750cm"/>
+<img src="TaskDiagram.png" alt="" width="750cm"/>
 <div class="caption">
 Task Diagram</div></div>
-<p> This is a task diagram for our pen plotter. The eack motor task runs its own motor driver, encoder driver, and controller. A calibration flags will be shared between the tasks to start plotting only after both motors have been calibrated.</p>
+<p> This is a task diagram for our pen plotter. Each motor task runs its own motor driver, encoder driver, and controller. A calibration flag will be shared between the tasks to start plotting only after both motors have been calibrated.</p>
 <h2><a class="anchor" id="ss_fsm1"></a>
 Motor 1 State Transition Diagram</h2>
 <div class="image">
-<img src="Motor_1_FSM.png" alt="" width="750cm"/>
+<img src="Motor_1.png" alt="" width="750cm"/>
 <div class="caption">
 Motor 1 Finite State Machine</div></div>
-<p> Our State Transition Diagram for Motor 1 has a calibration state, a wait state, and a run state. When the Motor 1 task is run, the FSM starts in the calibration state to zero the position of the motor using the hall effect sensor. Once the hall effect sensor flag is true, the FSM moves to the wait state to wait for the Motor 2 to finish calibrating before moving to the run state to begin plotting. Once in the run state, the motor 1 task runs until the plotting is completed.</p>
+<p> Our State Transition Diagram for Motor 1 has a calibration state and a run state. When the Motor 1 task is run, the FSM starts in the calibration state to zero the position of the motor using a limit switch. Once the limit switch flag is true, the FSM moves to the run state to begin plotting. Once in the run state, the motor 1 task runs until the plotting is completed.</p>
 <h2><a class="anchor" id="ss_fsm2"></a>
 Motor 2 State Transition Diagram</h2>
 <div class="image">
-<img src="Motor_2_FSM.png" alt="" width="750cm"/>
+<img src="Motor_2.png" alt="" width="750cm"/>
 <div class="caption">
 Motor 2 Finite State Machine</div></div>
-<p> Our State Transition Diagram for Motor 2 is very similar to motor 1 as it has a calibration state, a wait state, and a run state. When the Motor 2 task is run, the FSM starts in the calibration state to zero the position of the motor using the limit switch. Once the limit switch flag is true, the FSM moves to the wait state to wait for the Motor 1 to finish calibrating before moving to the run state to begin plotting. Once in the run state, the motor 2 task runs until the plotting is completed. </p>
+<p> Our State Transition Diagram for Motor 2 is very similar to motor 1 as it has a calibration state, and a run state. When the Motor 2 task is run, the FSM starts in the calibration state to zero the position of the motor using the limit switch. Once the limit switch flag is true, the FSM moves to the run state to begin plotting. Once in the run state, the motor 2 task runs until the plotting is completed. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
