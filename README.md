@@ -31,7 +31,7 @@
 |  1   | Nucleo with Shoe      | ME405 Tub             |    -      |
 |  1   | Sharpie    	       | Backpack              |    -      |
 |  1   | Hobby Servo           | Amazon                |   $5      |
-|  1   | Lead Screw  - 1/4-20  | McMaster-Carr         |   $15     |
+|  1   | Lead Screw  - 1/4-20  | McMaster-Carr         |   $5     |
 |  1   | Drive Shaft - 1/4 in  | Teche Lab             |    -      |
 |  1   | Shaft Couplers        | Amazon		       |   $5 	   |
 |  1   | Hex Nut               | McMaster-Carr 	       |   $5 	   |
@@ -43,6 +43,6 @@
 |  1   | Support Mount 	       | Teche Lab             |    -      |
 
 
-#### Picture of Pen Plotter
+##### Picture of Pen Plotter
 ![Pen Plotter](Images/PenPlotter.png)
 ###### Above is a picture of our Pen Plotter. A video demonstration of our pen plotter can be found using this link: https://youtu.be/GVp6Itpa4hw 
